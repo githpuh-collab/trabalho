@@ -1,0 +1,42 @@
+TESTE RAPIDO - TRABALHO DJANGO
+================================
+
+1. Abra um terminal na pasta que contem manage.py.
+
+2. Prepare o projeto:
+   python manage.py migrate
+   python create_superuser.py
+
+3. Crie dados de teste:
+   - opcao A: python create_sample_data.py
+   - opcao B: crie uma Empresa no admin em /admin/
+
+4. Inicie o servidor:
+   python manage.py runserver
+
+5. Acesse o dashboard:
+   http://localhost:8000/loja/1/
+
+   Esperado:
+   - sidebar com nome e ramo da empresa
+   - titulo "Lista de Produtos"
+   - tabela com produtos da empresa
+
+6. Teste o cadastro de cliente:
+   http://localhost:8000/loja/1/novo-cliente/
+
+   Esperado:
+   - titulo "Novo Cliente"
+   - formulario em card Bootstrap
+   - botao verde "Salvar"
+
+7. Teste o cadastro de produto:
+   http://localhost:8000/loja/1/novo-produto/
+
+   Esperado:
+   - titulo "Novo Produto"
+   - formulario em card Bootstrap
+   - redirect para /loja/1/ apos salvar
+
+Validacao automatica:
+   python manage.py test

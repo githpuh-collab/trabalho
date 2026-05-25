@@ -1,0 +1,30 @@
+ROTAS PUBLICAS
+==============
+
+1. /
+   - redireciona para a primeira empresa cadastrada
+   - se nao existir empresa, redireciona para /admin/
+
+2. /admin/
+   - painel administrativo do Django
+
+3. /loja/<empresa_id>/
+   - dashboard da empresa
+   - mostra sidebar com nome e ramo
+   - mostra tabela "Lista de Produtos"
+
+4. /loja/<empresa_id>/novo-cliente/
+   - GET: renderiza formulario de cliente
+   - POST: salva cliente vinculado a empresa da URL
+
+5. /loja/<empresa_id>/novo-produto/
+   - GET: renderiza formulario de produto
+   - POST: salva produto vinculado a empresa da URL
+
+NOMES DE URL
+============
+
+- index
+- url_da_loja
+- novo_cliente
+- novo_produto
